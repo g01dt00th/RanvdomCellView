@@ -10,7 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            ForEach(0..<3) {_ in 
+                HStack {
+                    ForEach(0..<3) {_ in 
+                        RandomCellView()
+                    }
+                }
+            }
+        }
     }
 }
 
